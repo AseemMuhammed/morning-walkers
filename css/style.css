@@ -1,0 +1,564 @@
+* {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    vertical-align: baseline;
+    background: transparent;
+    text-decoration: none;
+    outline: none;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+    list-style: none;
+}
+
+:root {
+    --prime: #080D0C;
+    --gray: #333;
+    --red: #ec4156;
+    --orenge: #f57334;
+}
+
+@font-face {
+    font-family: 'robotobold';
+    src: url('../fonts/roboto-bold_-_copy-webfont.woff2') format('woff2'),
+        url('../fonts/roboto-bold_-_copy-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+
+
+
+@font-face {
+    font-family: 'robotomedium';
+    src: url('../fonts/roboto-medium-webfont.woff2') format('woff2'),
+        url('../fonts/roboto-medium-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+
+
+
+@font-face {
+    font-family: 'robotoregular';
+    src: url('../fonts/roboto-regular-webfont.woff2') format('woff2'),
+        url('../fonts/roboto-regular-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+
+
+
+@font-face {
+    font-family: 'robotothin';
+    src: url('../fonts/roboto-thin-webfont.woff2') format('woff2'),
+        url('../fonts/roboto-thin-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+@font-face {
+    font-family: 'oswaldregular';
+    src: url('../fonts/oswald-variablefont_wght-webfont.woff2') format('woff2'),
+        url('../fonts/oswald-variablefont_wght-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+body {
+    font-family: 'oswaldregular';
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    font-family: 'oswaldregular';
+}
+
+.wrapper {
+    width: 90%;
+    margin: 0 auto;
+    max-width: 1400px;
+}
+
+section#spotlight {
+    height: 100vh;
+    background-image: url(../images/team.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    background-color: rgba(0, 0, 0, 0.8);
+    background-blend-mode: darken;
+}
+
+
+header div.wrapper {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 90px;
+}
+
+header div.wrapper div.logo a {
+    width: 80px;
+    display: block;
+}
+
+header div.wrapper div.logo img {
+    width: 100%;
+    display: block;
+}
+
+header div.wrapper div.nav ul {
+    display: flex;
+    align-items: center;
+}
+
+header div.wrapper div.nav li {
+    margin-right: 40px;
+}
+
+header div.wrapper div.nav li a:hover {
+
+    color: var(--orenge);
+    transform: translateY(-5px);
+
+}
+
+header div.wrapper div.nav li a.active {
+    color: var(--orenge);
+}
+
+header div.wrapper div.nav li a {
+    text-transform: capitalize;
+    font-size: 18px;
+    display: block;
+    color: #fff;
+    border-radius: 25px;
+    border: 1px solid transparent;
+    transition: .3s ease;
+}
+
+header div.wrapper div.nav li a.join {
+    background: linear-gradient(to right, var(--red), var(--orenge));
+    padding: 12px 30px;
+}
+
+header div.wrapper div.nav li a.join {
+    color: #fff;
+    border: none;
+    position: relative;
+}
+
+header div.wrapper div.nav li a.join::after {
+    content: "";
+    width: 100%;
+    height: 100%;
+    display: block;
+    background-color: var(--orenge);
+    z-index: -1;
+    transition: all .5s ease;
+    border-radius: 25px;
+    position: absolute;
+    top: 0;
+    right: 0;
+}
+
+header div.wrapper div.nav li a.join:hover::after {
+    transform: scaleX(1.4) scaleY(1.6);
+    opacity: 0;
+    z-index: 4;
+}
+
+.main .text-box {
+    padding-top: 200px;
+}
+
+.main .text-box h2 span {
+    text-transform: uppercase;
+    font-size: 54px;
+    color: #fff;
+    width: 45%;
+    line-height: 1.3em;
+    letter-spacing: 2px;
+    display: block;
+}
+
+.main .text-box span {
+    text-transform: uppercase;
+    font-size: 20px;
+    color: #ababab;
+    letter-spacing: 13px;
+    display: inline-block;
+    margin-top: 20px;
+}
+
+/* spotlight-end */
+#about {
+    padding: 100px 0;
+}
+
+#about h2 {
+    text-align: center;
+    text-transform: uppercase;
+    font-size: 36px;
+    margin-bottom: 34px;
+}
+
+#about p {
+    font-size: 20px;
+    width: 70%;
+    margin: 0 auto 24px;
+    text-align: center;
+    line-height: 1.3em;
+}
+
+#about p span {
+    color: var(--orenge);
+}
+
+#welcome {
+    padding: 80px 0;
+    position: relative;
+
+}
+
+#welcome .head {
+    text-align: center;
+}
+
+#welcome .head span {
+    text-transform: uppercase;
+    font-size: 16px;
+    color: #333;
+    letter-spacing: 8px;
+    display: inline-block;
+    margin-bottom: 8px;
+}
+
+#welcome .head h2 {
+    font-size: 36px;
+    text-transform: uppercase;
+    color: var(--prime);
+}
+
+#welcome .head h2 small {
+    font-size: 36px;
+    color: var(--orenge);
+}
+
+#welcome .circle {
+    display: flex;
+    justify-content: center;
+    width: 400px;
+    margin: 40px auto 0;
+    border-radius: 50%;
+    position: relative;
+    overflow: hidden;
+
+}
+
+
+@keyframes imager {
+    0% {
+        transform: scale(1);
+    }
+
+    50% {
+        transform: scale(1.5);
+    }
+
+    100% {
+        transform: scale(1);
+    }
+}
+
+#welcome .circle::after {
+    content: "";
+    width: 395px;
+    height: 395px;
+    border: 2px solid var(--orenge);
+    border-top: 5px solid transparent;
+    border-bottom: 5px solid transparent;
+    animation: circle 4s forwards infinite;
+    position: absolute;
+    border-radius: 50%;
+    top: 0;
+    right: 0;
+}
+
+@keyframes circle {
+    0% {
+        transform: rotate(0);
+    }
+
+    50% {
+        transform: rotate(50deg);
+    }
+
+    100% {
+        transform: rotate(-360deg);
+    }
+}
+
+#welcome .circle .circle-theme img {
+    width: 100%;
+    display: block;
+    border-radius: 50%;
+    animation: imager 6s infinite ease-in-out;
+    padding: 10px;
+    opacity: 0.7;
+
+}
+
+#welcome .items-box .item h4 {
+    font-size: 30px;
+    font-weight: 800;
+    font-weight: 700;
+    text-transform: uppercase;
+    z-index: 4;
+    transition: .3s ease;
+}
+
+#welcome .items-box .item span {
+    font-size: 60px;
+    font-weight: bold;
+    color: #e7e7e7;
+    z-index: -1;
+    display: block;
+}
+
+#welcome .items-box .item .head-box {
+    position: relative;
+    margin-bottom: 24px;
+}
+
+#welcome .items-box .item .head-box span {
+    position: absolute;
+    top: -50%;
+}
+
+#welcome .items-box .item {
+    position: absolute;
+    cursor: pointer;
+}
+
+#welcome .items-box .item.top {
+    top: 250px;
+}
+
+#welcome .items-box .item.bottom {
+    bottom: 160px;
+}
+
+#welcome .items-box .item.right {
+    right: 50px;
+    text-align: right;
+}
+
+#welcome .items-box .item.right span {
+    right: 0;
+}
+
+#welcome .items-box .item:hover h4 {
+    background: linear-gradient(to right, var(--red), var(--orenge));
+    ;
+    -webkit-text-fill-color: transparent;
+    -webkit-background-clip: text;
+    display: inline-block;
+    transform: translateY(-10px);
+}
+
+#welcome .wrapper div.button {
+    text-align: center;
+    margin-top: 80px;
+}
+
+#welcome .wrapper a.button {
+    background: linear-gradient(to right, var(--red), var(--orenge));
+    font-size: 18px;
+    padding: 18px 36px;
+    border-radius: 10px;
+    text-transform: capitalize;
+    color: #fff;
+    transition: .3s ease;
+}
+
+#welcome .wrapper a.button:hover {
+    background: var(--red);
+}
+
+#social {
+    padding: 80px 0;
+    text-align: center;
+    background-color: var(--prime);
+}
+
+#social h3 {
+    margin-bottom: 16px;
+    color: #fff;
+    font-size: 24px;
+    text-transform: capitalize;
+}
+
+#social span a {
+    background: #4267B2;
+    color: #fff;
+    padding: 12px 24px;
+    font-size: 18px;
+    border-radius: 10px;
+    display: inline-block;
+    transition: .3s ease;
+}
+
+#social span a i {
+    margin-right: 8px;
+}
+
+#social span a:hover {
+    transform: scale(1.03);
+}
+
+#admins {
+    padding: 80px 0;
+}
+
+#admins .wrapper .admin-box {
+    display: flex;
+    width: 600px;
+    margin: 0 auto;
+    margin-bottom: 50px;
+    position: relative;
+}
+
+
+#admins .wrapper .admin-box .avatar {
+    width: 100px;
+    position: absolute;
+    top: -40px;
+    left: -50px;
+    padding: 6px;
+    background: #fff;
+    border-radius: 50%;
+    box-shadow: rgba(0, 0, 0, 0.15) 0px 2px 8px;
+    z-index: 4;
+}
+
+#admins .wrapper .admin-box .avatar.avtr-right {
+    left: 550px;
+}
+
+#admins .wrapper .admin-box .avatar img {
+    width: 100%;
+    display: block;
+    border-radius: 50%;
+
+}
+
+#admins .wrapper .admin-box .content {
+    background: linear-gradient(45deg, #858585, #3d3d3d);
+    width: 600px;
+    padding: 40px 60px;
+    border-radius: 10px;
+    border-bottom-left-radius: 50px;
+    border-top-right-radius: 50px;
+    box-shadow: rgba(0, 0, 0, 0.18) 0px 2px 4px;
+
+}
+
+#admins .wrapper .admin-box .content p {
+    color: #fff;
+    line-height: 1.3em;
+    font-size: 16px;
+    margin-bottom: 14px;
+}
+
+#admins .wrapper .admin-box .content span {
+    display: block;
+    margin-bottom: 4px;
+    font-size: 18px;
+    color: #fefefe;
+}
+
+#admins .wrapper .admin-box .content small {
+    color: #f57334;
+}
+
+/* admins end */
+#events {
+    padding: 100px 0 100px 0;
+    background: url(../images/background-events.gif);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    background-color: rgba(0, 0, 0, 0.94);
+    background-blend-mode: darken;
+}
+
+#events .head {
+    text-align: center;
+
+}
+
+#events .head span {
+    text-transform: uppercase;
+    font-size: 16px;
+    color: #fff;
+    letter-spacing: 8px;
+    display: inline-block;
+    margin-bottom: 8px;
+}
+
+#events .head h2 {
+    font-size: 36px;
+    text-transform: uppercase;
+    color: #fff;
+}
+
+#events .head h2 small {
+    font-size: 36px;
+    color: var(--orenge);
+}
+
+#events ul {
+    padding: 100px 120px;
+}
+
+#events ul li {
+    cursor: pointer;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 18px 0;
+    border-bottom: 1px solid var(--orenge);
+
+}
+
+#events ul li .subject h3 {
+    color: #fff;
+    margin-bottom: 6px;
+    font-size: 20px;
+
+}
+
+#events ul li .subject p {
+    color: #fff;
+    font-size: 16px;
+
+}
+
+#events ul li .date h4 {
+    color: var(--orenge);
+
+}
