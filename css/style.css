@@ -138,6 +138,7 @@ header div.wrapper div.nav li a:hover {
 
 header div.wrapper div.nav li a.active {
     color: var(--orenge);
+    transition: .3s ease color;
 }
 
 header div.wrapper div.nav li a {
@@ -179,6 +180,40 @@ header div.wrapper div.nav li a.join:hover::after {
     transform: scaleX(1.4) scaleY(1.6);
     opacity: 0;
     z-index: 4;
+}
+
+/* sticky-header */
+.sticky header {
+    position: fixed;
+    width: 100%;
+    z-index: 66;
+    animation: header-animation .5s forwards;
+    box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+}
+
+@supports (backdrop-filter: blur()) {
+    .sticky header {
+        background-color: #080d0cbb;
+        backdrop-filter: blur(10px)
+    }
+}
+
+@supports not (backdrop-filter: blur(10px)) {
+    .sticky header {
+        background-color: var(--prime);
+
+
+    }
+}
+
+@keyframes header-animation {
+    0% {
+        transform: translateY(-60px);
+    }
+
+    100% {
+        transform: translateY(0);
+    }
 }
 
 .main .text-box {
@@ -502,7 +537,7 @@ header div.wrapper div.nav li a.join:hover::after {
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover;
-    background-color: rgba(0, 0, 0, 0.94);
+    background-color: rgba(0, 0, 0, 0.84);
     background-blend-mode: darken;
 }
 
@@ -524,6 +559,7 @@ header div.wrapper div.nav li a.join:hover::after {
     font-size: 36px;
     text-transform: uppercase;
     color: #fff;
+    letter-spacing: 2px;
 }
 
 #events .head h2 small {
@@ -531,11 +567,11 @@ header div.wrapper div.nav li a.join:hover::after {
     color: var(--orenge);
 }
 
-#events ul {
+#events ul.news {
     padding: 100px 120px;
 }
 
-#events ul li {
+#events ul.news li {
     cursor: pointer;
     display: flex;
     justify-content: space-between;
@@ -545,20 +581,224 @@ header div.wrapper div.nav li a.join:hover::after {
 
 }
 
-#events ul li .subject h3 {
+#events ul.news li .subject h3 {
     color: #fff;
     margin-bottom: 6px;
     font-size: 20px;
 
 }
 
-#events ul li .subject p {
+#events ul.news li .subject p {
     color: #fff;
     font-size: 16px;
 
 }
 
-#events ul li .date h4 {
+#events ul.news li .date h4 {
     color: var(--orenge);
 
+}
+
+#events .slider-moments .head h2 {
+    margin-bottom: 20px;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+}
+
+#events ul.events-slider {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+
+#events ul.events-slider li {
+    width: 450px;
+    margin: 0 20px;
+    position: relative;
+    overflow: hidden;
+    border-radius: 10px;
+    cursor: pointer;
+}
+
+#events ul.events-slider li::after {
+    content: "";
+    width: 100%;
+    height: 100%;
+    background: rgba(255, 255, 255, 0.4);
+    position: absolute;
+    top: -100%;
+    transition: .3s ease;
+}
+
+#events ul.events-slider li:hover::after {
+    top: 0;
+}
+
+#events ul.events-slider li:hover img {
+    transform: scale(1.04);
+}
+
+#events ul.events-slider li .preview {
+    display: block;
+    width: 100%;
+}
+
+#events ul.events-slider li .preview img {
+    width: 100%;
+    display: block;
+    border-radius: 10px;
+    transition: .3s ease;
+    max-height: 213px;
+}
+
+#events ul.events-slider .content {
+    position: absolute;
+    bottom: 0;
+    /* left: 10px; */
+    width: 100%;
+    padding: 10px;
+    border-radius: 10px;
+    background-image: linear-gradient(to top, rgba(0, 0, 0, 0.9), rgba(0, 0, 0, 0.2));
+}
+
+#events ul.events-slider .content h4 {
+    color: #fff;
+    font-size: 18px;
+    text-transform: capitalize;
+}
+
+#events ul.events-slider .content span {
+    color: #fff;
+    display: inline-block;
+    margin-top: 5px;
+    font-size: 16px;
+}
+
+/* events-end */
+#workout {
+    padding: 100px 0;
+}
+
+#workout .head {
+    text-align: center;
+
+}
+
+#workout .head span {
+    text-transform: uppercase;
+    font-size: 16px;
+    color: var(--prime);
+    letter-spacing: 8px;
+    display: inline-block;
+    margin-bottom: 8px;
+}
+
+#workout .head h2 {
+    font-size: 36px;
+    text-transform: uppercase;
+    color: var(--prime);
+    letter-spacing: 2px;
+}
+
+#workout .head h2 small {
+    font-size: 36px;
+    color: var(--orenge);
+}
+
+#workout ul.list-boxs {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    margin-top: 48px;
+
+}
+
+#workout ul.list-boxs li {
+    cursor: pointer;
+    width: 40%;
+    display: flex;
+    align-items: center;
+    box-shadow: rgba(0, 0, 0, 0.15) 1.95px 1.95px 2.6px;
+    box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+    margin: 0 26px 26px 0;
+    transition: .3s ease;
+    border-radius: 10px;
+    overflow: hidden;
+    position: relative;
+
+}
+
+#workout ul.list-boxs li:hover {
+    box-shadow: #f5743422 5px 10px 12px;
+    transform: scale(1.02);
+}
+
+#workout ul.list-boxs li:nth-child(2n) {
+    margin-right: 0;
+}
+
+#workout ul.list-boxs li .image-container {
+    width: 70%;
+    opacity: 0.7;
+    transition: .3s ease;
+}
+
+#workout ul.list-boxs li:hover .image-container {
+    opacity: 1;
+}
+
+#workout ul.list-boxs li .image-container img {
+    width: 100%;
+    display: block;
+    border-bottom-left-radius: 10px;
+    border-top-left-radius: 10px;
+
+}
+
+#workout ul.list-boxs li .content-box {
+    margin-left: 16px;
+    padding: 16px;
+    transition: .3s ease;
+}
+
+#workout ul.list-boxs li .content-box h3 {
+    font-size: 24px;
+    margin-bottom: 12px;
+}
+
+#workout ul.list-boxs li .content-box p {
+    font-size: 16px;
+    margin-bottom: 12px;
+    line-height: 1.2em;
+}
+
+#workout ul.list-boxs li .content-box a {
+    width: 120px;
+    text-align: center;
+    font-size: 16px;
+    display: inline-block;
+    padding: 14px 28px;
+    border-radius: 30px;
+    background: var(--orenge);
+    color: #fff;
+    transition: .3s ease;
+    position: absolute;
+    bottom: -100px;
+    opacity: 0;
+}
+
+#workout ul.list-boxs li:hover .content-box a {
+    bottom: 28px;
+    opacity: 1;
+}
+
+#workout ul.list-boxs li:hover .content-box {
+    margin-top: -24px;
+}
+
+#workout ul.list-boxs li .content-box a:hover {
+    background: var(--red);
+    width: 160px;
 }

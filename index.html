@@ -6,10 +6,24 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Morning Walkers - Kalikavu</title>
+
+    <!-- links -->
     <link rel="stylesheet" href="./css/style.css" />
-    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+    <link rel="stylesheet" href="./css/slick.css" />
+    <link rel="stylesheet" href="./css/slick-theme.css" />
+    <link rel="stylesheet" href="./css/aos.css">
     <link rel="stylesheet" href="./css/all.css" />
+
+    <!-- Scripts -->
+    <script src="./js/jquery-3.6.1.min.js"></script>
+    <script src="./js/aos.js"></script>
+    <script src="./js/slick.min.js"></script>
+    <script src="./js/script.js" defer></script>
+
+    <!-- favicon -->
     <link rel="icon" href="./images/logo.png" />
+
+
 
 </head>
 
@@ -24,9 +38,10 @@
                 </div>
                 <div class="nav">
                     <ul>
-                        <li><a href="#" class="active">home</a></li>
-                        <li><a href="#">about us</a></li>
-                        <li><a href="#">workouts</a></li>
+                        <li><a href="#spotlight" class="active spotlight">home</a></li>
+                        <li><a href="#about" class="about">about us</a></li>
+                        <li><a href="#events" class="events">news</a></li>
+                        <li><a href="#workout" class="workout">workouts</a></li>
                         <li><a href="#">coches</a></li>
                         <li><a href="#">gallery</a></li>
                         <li><a href="#">public view</a></li>
@@ -159,7 +174,7 @@
                 <span>events</span>
                 <h2>upcomming <small>events</small> </h2>
             </div>
-            <ul>
+            <ul class="news">
                 <li data-aos="fade-down">
                     <div class="subject">
                         <h3>Meet up</h3>
@@ -197,14 +212,119 @@
                     </div>
                 </li>
             </ul>
+            <div class="slider-moments">
+                <div class="head">
+                    <h2>Moments</h2>
+                </div>
+                <ul class="events-slider" data-aos="fade-up">
+                    <li>
+                        <div class="preview">
+                            <img src="./images/team.jpg" alt="Events">
+
+                        </div>
+                        <div class="content">
+                            <h4>running competition</h4>
+                            <span>27 JAN 2022</span>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="preview">
+                            <img src="./images/team.jpg" alt="Events">
+
+                        </div>
+                        <div class="content">
+                            <h4>running competition</h4>
+                            <span>27 JAN 2022</span>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="preview">
+                            <img src="./images/team.jpg" alt="Events">
+
+                        </div>
+                        <div class="content">
+                            <h4>running competition</h4>
+                            <span>27 JAN 2022</span>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="preview">
+                            <img src="./images/team.jpg" alt="Events">
+
+                        </div>
+                        <div class="content">
+                            <h4>running competition</h4>
+                            <span>27 JAN 2022</span>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="preview">
+                            <img src="./images/team.jpg" alt="Events">
+
+                        </div>
+                        <div class="content">
+                            <h4>running competition</h4>
+                            <span>27 JAN 2022</span>
+                        </div>
+                    </li>
+                </ul>
+            </div>
         </div>
     </section>
-
-
-    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
-    <script>
-        AOS.init();
-    </script>
+    <section id="workout">
+        <div class="wrapper">
+            <div class="head">
+                <span>our</span>
+                <h2>work <small>outs</small> </h2>
+            </div>
+            <ul class="list-boxs">
+                <li>
+                    <div class="image-container">
+                        <img src="./images/running-shoe.jpg" alt="Running">
+                    </div>
+                    <div class="content-box">
+                        <h3>Running</h3>
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Natus placeat iste deserunt quae
+                            rerum iure?</p>
+                        <a href="#" class="button">More</a>
+                    </div>
+                </li>
+                <li>
+                    <div class="image-container">
+                        <img src="./images/badminton.jpg" alt="Badminton">
+                    </div>
+                    <div class="content-box">
+                        <h3>Badminton</h3>
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Natus placeat iste deserunt quae
+                            rerum iure?</p>
+                        <a href="#" class="button">More</a>
+                    </div>
+                </li>
+                <li>
+                    <div class="image-container">
+                        <img src="./images/running-shoe.jpg" alt="Running">
+                    </div>
+                    <div class="content-box">
+                        <h3>Running</h3>
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Natus placeat iste deserunt quae
+                            rerum iure?</p>
+                        <a href="#" class="button">More</a>
+                    </div>
+                </li>
+                <li>
+                    <div class="image-container">
+                        <img src="./images/badminton.jpg" alt="Badminton">
+                    </div>
+                    <div class="content-box">
+                        <h3>Badminton</h3>
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Natus placeat iste deserunt quae
+                            rerum iure?</p>
+                        <a href="#" class="button">More</a>
+                    </div>
+                </li>
+            </ul>
+        </div>
+    </section>
 </body>
 
 </html>
