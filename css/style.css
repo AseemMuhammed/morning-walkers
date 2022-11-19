@@ -1391,6 +1391,228 @@ footer .info small {
     border-radius: 6px;
 }
 
+/* about-page */
+#about-spotlight div.mian {
+    padding: 50px 0;
+}
+
+
+#about-spotlight .wrapper h2 {
+    text-align: center;
+    font-size: 40px;
+    letter-spacing: 1px;
+
+    color: var(--orenge);
+}
+
+#about-spotlight div.content {
+    padding: 40px;
+}
+
+#about-spotlight div.content {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#about-spotlight div.content .img {
+    width: 500px;
+}
+
+#about-spotlight div.content .img img {
+    display: block;
+    width: 100%;
+}
+
+#about-spotlight div.content .text {
+    max-width: 500px;
+    margin-left: 40px;
+}
+
+#about-spotlight div.content .text h3 {
+    font-weight: 600;
+    font-size: 36px;
+    margin-bottom: 30px;
+}
+
+#about-spotlight div.content .text p {
+    color: #8e8e8e;
+    margin-bottom: 40px;
+    line-height: 1.3em;
+}
+
+#about-spotlight div.content .text span {
+    display: block;
+    font-size: 26px;
+    font-weight: 600;
+    margin-bottom: 6px;
+    color: var(--orenge);
+    letter-spacing: 1px;
+
+}
+
+#about-spotlight div.content .text small {
+    font-size: 18px;
+    color: #c7c7c7;
+}
+
+section#content-box {
+    padding: 60px 0;
+}
+
+section#content-box div.img {
+    width: 400px;
+    padding: 10px;
+    background: #fff;
+    box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+    border-radius: 30px;
+    transform: rotate(-8deg);
+}
+
+section#content-box div.img img {
+    display: block;
+    width: 100%;
+    border-radius: 30px;
+}
+
+section#content-box text {
+    width: 60%;
+    line-height: 1.5em;
+}
+
+section#content-box div.one {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 50px;
+}
+
+section#content-box div.two {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 50px;
+    flex-direction: row-reverse;
+}
+
+section#content-box div.three {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 50px;
+}
+
+section#content-box div.four {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 50px;
+    flex-direction: row-reverse;
+}
+
+/* media query */
+
+@media all and (max-width:1280px) {
+    #about-spotlight div.content {
+        width: 90%;
+        line-height: 1.5em;
+    }
+
+    section#content-box {
+        width: 90%;
+        margin: 0 auto;
+    }
+
+    section#content-box div.img {
+        width: 340px;
+    }
+
+}
+
+@media all and (max-width:980px) {
+    #about-spotlight div.mian {
+        padding: 60px;
+        height: 280px;
+    }
+
+    #about-spotlight .wrapper h2 {
+        margin-top: 120px;
+    }
+
+    #about-spotlight div.content .text h3 {
+        font-size: 28px;
+        margin-bottom: 20px;
+    }
+
+    #about-spotlight div.content .text p {
+        margin-bottom: 30px;
+    }
+
+    #about-spotlight div.content .text span {
+        font-size: 24px;
+    }
+
+    section#content-box div.img {
+        width: 260px;
+    }
+}
+
+/* form-page */
+#form {
+    padding: 100px 0;
+}
+
+#form .head {
+    text-align: center;
+    margin-bottom: 50px;
+}
+
+#form .head h4 {
+    font-size: 28px;
+    color: var(--orenge);
+}
+
+#form form {
+    width: 50%;
+    margin: 0 auto;
+}
+
+
+#form form .input {
+    width: 100%;
+    border: 2px solid #000;
+    margin-bottom: 30px;
+    padding: 16px 20px;
+    border-radius: 20px;
+    transition: .4s ease;
+}
+
+#form form .input::placeholder {
+    transition: .4s ease;
+}
+
+#form form .input:focus::placeholder {
+    transform: translateY(-12px);
+    color: var(--orenge);
+}
+
+#form form input:focus {
+    border: 2px solid var(--orenge);
+}
+
+#form .button {
+    text-align: center;
+    display: block;
+    padding: 14px 20px;
+    background: var(--orenge);
+    color: #fff;
+    width: 200px;
+    border-radius: 20px;
+    margin: 0 auto;
+    transition: .4s ease;
+}
+
+#form .button:hover {
+    width: 240px;
+    background: var(--red);
+}
+
 @media all and (max-width: 1160px) {
     #gallery ul li {
         width: 28%;
